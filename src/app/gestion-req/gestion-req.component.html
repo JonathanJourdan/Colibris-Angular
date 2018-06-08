@@ -1,0 +1,10 @@
+<h2>{{ titre }}</h2>
+<article *ngFor="let r of listeReq">
+<img [src]="r.cover">
+<div>
+<h3>{{ r.title }}</h3>
+<p>Auteur : {{r.author}}</p>
+<p>Date de publication : {{r.publishedDate}}</p>
+<p>ISBN13 : {{r.ISBN13}}</p>
+</div>
+</article>

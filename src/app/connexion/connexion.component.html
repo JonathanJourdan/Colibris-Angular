@@ -1,0 +1,10 @@
+<form (ngSubmit)="soumission(fm)" #fm="ngForm">
+  <label>Identifiant</label>
+  <input name="id" [(ngModel)]="user.id" type="email" #idCtrl="ngModel" required minlenght="4">
+  <div *ngIf="idCtrl.invalid">Veuillez remplir l'ID</div>
+  <label>Mot de passe</label>
+  <input name="mdp" [(ngModel)]="user.mdp" required>
+  <p>{{user.id}} - {{user.mdp}}</p>
+  <button (click)="testID()">TEST ID</button>
+  <input type="submit" value="Envoie">
+</form>

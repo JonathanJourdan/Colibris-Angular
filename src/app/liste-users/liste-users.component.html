@@ -1,0 +1,8 @@
+<h2>{{ titre }}</h2>
+<article *ngFor="let u of lUsers.listeUsers; let i = index">
+<img [src]="u.cover">
+<div>
+<h3>{{ u.nom }} {{ u.prenom }}</h3>
+</div>
+<div><a href [routerLink] = "['/users',i]">Editer cet utilisateur</a></div>
+</article>
